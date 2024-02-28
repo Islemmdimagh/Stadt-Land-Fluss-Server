@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "e1adcac5-5c57-4be8-b858-4f09faf14a90",
+		"name": "Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Lobby",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = pm.response.json();",
+							"pm.environment.set(\"host_token\", data.hostToken);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"host\": \"test_host_username\",\n    \"rounds\": \"5\",\n    \"roundDuration\": \"10\",\n    \"categoryCitiesActive\": \"true\",\n    \"categoryCountriesActive\": \"false\",\n    \"categoryRiversActive\": \"false\",\n    \"categoryMunicipalityActive\": \"true\",\n    \"customCategory1\": \"testkategorie1\",\n    \"customCategory2\": \"\",\n    \"customCategory3\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Lobby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lobbies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User / Players to Lobby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"testuser\",\n    \"lobbyId\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies/1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users / Players of Lobby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lobbies/1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Settings of Lobby",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hostToken\": \"{{host_token}}\",\n    \"rounds\": \"5\",\n    \"roundDuration\": \"110\",\n    \"categoryCitiesActive\": \"true\",\n    \"categoryCountriesActive\": \"true\",\n    \"categoryRiversActive\": \"true\",\n    \"categoryMunicipalityActive\": \"true\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start Game of a Lobby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hostToken\": \"{{host_token}}\",\n    \"roundStarted\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies/1/startRound",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"startRound"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Letter of a Lobby",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lobbies/1/letter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"letter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Next Letter of running Game in Lobby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"hostToken\":\"{{host_token}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies/1/nextRound",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"nextRound"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check if Game in Lobby is running",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lobbies/1/gameRunning",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"gameRunning"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit answer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"playerToken\":\"{{host_token}}\",\n    \"answer\": \"gamprin\",\n    \"category\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/lobbies/1/submitAnswer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"submitAnswer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Answers of the current endpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/lobbies/1/answersOfCurrentLetter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"lobbies",
+						"1",
+						"answersOfCurrentLetter"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
