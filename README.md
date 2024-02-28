@@ -1,11 +1,6 @@
 # Categories!
 Welcome to our Project *Categories!*
 
- [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=sopra-fs22-group28_sopra-fs22-group28-server&metric=alert_status)](https://sonarcloud.io/dashboard?id=sopra-fs22-group28_sopra-fs22-group28-server) 
- [![SonarCloud Coverage](https://sonarcloud.io/api/project_badges/measure?project=sopra-fs22-group28_sopra-fs22-group28-server&metric=coverage)](https://sonarcloud.io/component_measures/metric/coverage/list?id=sopra-fs22-group28_sopra-fs22-group28-server)
- [![SonarCloud Bugs](https://sonarcloud.io/api/project_badges/measure?project=sopra-fs22-group28_sopra-fs22-group28-server&metric=bugs)](https://sonarcloud.io/component_measures/metric/reliability_rating/list?id=sopra-fs22-group28_sopra-fs22-group28-server)
- [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sopra-fs22-group28_sopra-fs22-group28-server&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=sopra-fs22-group28_sopra-fs22-group28-server)
-
 Quick-Access: [Client](https://sopra-fs22-group28-client.herokuapp.com/) - [Server](https://sopra-fs22-group28-server.herokuapp.com/)
 
 ## Introduction
@@ -147,7 +142,7 @@ There are still many improvements possible to our game. Some of them are the fol
 ### Authors
 - [Timothy-Till Näscher](https://github.com/tnaescher)
 - [Witold Rozek](https://github.com/wrozek)
-- [Mohamed Islem Mdimagh](https://github.com/Islemuzh)
+- [Mohamed Islem Mdimagh](https://github.com/Islemmdimagh)
 
 ### Acknowledgment
 We wanted to thank our TA [Tarek Alakmeh](https://github.com/Taremeh) for helping and bringing us through this very interesting and instructive project!
