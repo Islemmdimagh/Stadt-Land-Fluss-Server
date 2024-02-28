@@ -1,8 +1,6 @@
 # Categories!
 Welcome to our Project *Categories!*
 
-Quick-Access: [Client](https://sopra-fs22-group28-client.herokuapp.com/) - [Server](https://sopra-fs22-group28-server.herokuapp.com/)
-
 ## Introduction
 Categories (“Stadt-Land-Fluss”) is a fun game which can be played by 2 or more players. There is an amount of rounds and some Categories which can be chosen individually. In each round a new random letter is set and every player has to find words for the specific categories which start with the given letter. As soon as a player submits all his answers for this letter the round will be closed for everyone. For each valid answer you will get a point. For the predefined categories the game will automatically validate each submitted answer. There is also the possibility for each player to vote for an invalid answer of someone else to be counted as valid in case the automatic validation is faulty. Also, the players vote for all answers submitted in custom categories. At the end all the points from each round will be added up and the 3 best players will be displayed.
 
@@ -28,10 +26,10 @@ The Technologies we used in our server repository are the following:
 ## High-level components
 Our main components of our backend are the following:
 
-1. The [Lobby](https://github.com/sopra-fs22-group28/sopra-fs22-group28-server/blob/master/src/main/java/ch/uzh/ifi/hase/soprafs22/entity/Lobby.java) class, responsible for storing all important information of a lobby in the repository, like for example the LobbyId and the HostToken.
-2. The [LobbyService](https://github.com/sopra-fs22-group28/sopra-fs22-group28-server/blob/master/src/main/java/ch/uzh/ifi/hase/soprafs22/service/LobbyService.java) class is responsible for managing the lobby which is the base of our project. This means creating the lobby and getting important information from the lobby.
-3. The [LobbyController](https://github.com/sopra-fs22-group28/sopra-fs22-group28-server/blob/master/src/main/java/ch/uzh/ifi/hase/soprafs22/controller/LobbyController.java) class is responsible for managing all our endpoints, which are important for our connection to the frontend and the execution of our game.
-4. The [Validator](https://github.com/sopra-fs22-group28/sopra-fs22-group28-server/blob/master/src/main/java/ch/uzh/ifi/hase/soprafs22/utils/Validator.java) class is responsible for validating the answers, connecting us to an external API and is important for the sense of our game.
+1. The Lobby class, responsible for storing all important information of a lobby in the repository, like for example the LobbyId and the HostToken.
+2. The LobbyService class is responsible for managing the lobby which is the base of our project. This means creating the lobby and getting important information from the lobby.
+3. The LobbyController class is responsible for managing all our endpoints, which are important for our connection to the frontend and the execution of our game.
+4. The Validator class is responsible for validating the answers, connecting us to an external API and is important for the sense of our game.
 
 # Launch and deployment
 In the following there are some important steps and prerequisites that you should have heard of in order to join and work on our project. This should help you to get started with our application.
@@ -140,12 +138,9 @@ There are still many improvements possible to our game. Some of them are the fol
 
 ## Authors and acknowledgment
 ### Authors
-- [Timothy-Till Näscher](https://github.com/tnaescher)
-- [Witold Rozek](https://github.com/wrozek)
-- [Mohamed Islem Mdimagh](https://github.com/Islemmdimagh)
-
-### Acknowledgment
-We wanted to thank our TA [Tarek Alakmeh](https://github.com/Taremeh) for helping and bringing us through this very interesting and instructive project!
+- Timothy-Till Näscher
+- Witold Rozek
+- Mohamed Islem Mdimagh
 
 ## License
 This project is licensed under the MIT license.
